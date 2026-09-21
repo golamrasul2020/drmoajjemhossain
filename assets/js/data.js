@@ -2,6 +2,7 @@
    SITE_DATA - single source of truth for the website
 ========================================================= */
 const DOCTOR_NAME = "Prof. Dr. Md. Moajjem Hossain Talukder";
+const HOSPITAL_MAP_URL = "https://maps.app.goo.gl/d6VCEmatFzUN79138";
 
 const SITE_DATA = {
   seo: {
@@ -10,7 +11,6 @@ const SITE_DATA = {
     url: "https://www.example-doctor.com",
     ogImage: "assets/img/og-cover.jpg"
   },
-
   doctor: {
     name: DOCTOR_NAME,
     designation: "MBBS, MS, MCh (Neurosurgery)",
@@ -26,10 +26,10 @@ const SITE_DATA = {
     consultationHours: "Saturday – Thursday: 10:00 AM – 5:00 PM",
     social: { linkedin: "#", twitter: "#", youtube: "#", researchgate: "#" }
   },
-
   heroSlides: [
     {
       image: "assets/img/hero-1.jpg",
+      visual: "hero-visual-brain",
       eyebrow: "Neurosurgeon & Neurotrauma Specialist",
       title: `Expert Care by ${DOCTOR_NAME}`,
       text: "Advanced neurosurgical and neurotrauma care focused on precision, recovery and compassion.",
@@ -38,6 +38,7 @@ const SITE_DATA = {
     },
     {
       image: "assets/img/hero-2.jpg",
+      visual: "hero-visual-spine",
       eyebrow: "Neurotrauma Expertise",
       title: "Specialized Brain and Spine Care",
       text: "Comprehensive evaluation and treatment for traumatic brain and spinal injuries.",
@@ -45,33 +46,30 @@ const SITE_DATA = {
     },
     {
       image: "assets/img/hero-3.jpg",
+      visual: "hero-visual-pathway",
       eyebrow: "Advanced Clinical Care",
       title: "Precision. Experience. Compassion.",
       text: "Individualized, patient-centered neurosurgical care.",
       ctaPrimary: { label: "View Expertise", href: "#expertise" }
     }
   ],
-
   stats: [
     { value: 20, suffix: "+", label: "Years Experience" },
     { value: 4000, suffix: "+", label: "Procedures Performed" },
     { value: 30, suffix: "+", label: "Publications" },
     { value: 12000, suffix: "+", label: "Patients Treated" }
   ],
-
   timeline: [
     { year: "MBBS", title: "Medical Education", detail: "Medical training and clinical practice" },
     { year: "MS", title: "General Surgery", detail: "Advanced surgical training" },
     { year: "MCh", title: "Neurosurgery", detail: "Specialist neurosurgical training" },
     { year: "Present", title: "Consultant Neurosurgeon", detail: "Brain, spine and neurotrauma care" }
   ],
-
   credentials: {
     memberships: ["Neurological Society", "National Association of Neurosurgeons", "Trauma Society"],
     interests: ["Traumatic Brain Injury", "Spinal Trauma", "Neurovascular Surgery", "Skull Base Surgery"],
     awards: ["Clinical Excellence Recognition", "Patient Care Award"]
   },
-
   expertise: [
     { icon: "bi-activity", category: "Neurotrauma", title: "Traumatic Brain Injury", desc: "Evaluation and management of traumatic brain injuries." },
     { icon: "bi-shield-exclamation", category: "Neurotrauma", title: "Intracranial Hemorrhage", desc: "Diagnosis and treatment of intracranial bleeding." },
@@ -80,19 +78,12 @@ const SITE_DATA = {
     { icon: "bi-lightning-charge", category: "Spine", title: "Spinal Cord Injury", desc: "Comprehensive care for spinal cord injury." },
     { icon: "bi-arrow-repeat", category: "Spine", title: "Degenerative Spine Disorders", desc: "Management of disc, stenosis and degenerative conditions." }
   ],
-
-  treatments: [
-    { id: "tbi-management", category: "Neurotrauma", title: "Traumatic Brain Injury Management", overview: "Structured evaluation and treatment for head injury.", indications: ["Head trauma", "Altered consciousness"], diagnosis: ["Neurological examination", "CT / MRI"], options: ["Observation", "Medical management", "Surgery where indicated"], recovery: "Recovery depends on injury severity.", faqs: [{ q: "Is surgery always required?", a: "No. Treatment depends on clinical findings." }] },
-    { id: "spinal-trauma-care", category: "Spine", title: "Spinal Trauma Care", overview: "Assessment and management of acute spinal injuries.", indications: ["Back or neck pain after trauma", "Neurological deficit"], diagnosis: ["X-ray / CT / MRI"], options: ["Conservative care", "Spinal stabilization"], recovery: "Rehabilitation is individualized.", faqs: [{ q: "Will I need surgery?", a: "This depends on imaging and neurological status." }] },
-    { id: "brain-tumor-surgery", category: "Brain", title: "Brain Tumor Surgery", overview: "Surgical planning and treatment of intracranial tumors.", indications: ["Intracranial mass", "Neurological symptoms"], diagnosis: ["MRI with contrast"], options: ["Resection", "Biopsy", "Combined care"], recovery: "Follow-up imaging guides recovery.", faqs: [{ q: "Are all brain tumors operated on?", a: "No. Treatment depends on the individual case." }] }
-  ],
-
+  treatments: [],
   whyChoose: [
     { icon: "bi-clipboard2-pulse", title: "Specialized Expertise", desc: "Focused brain, spine and neurotrauma experience." },
     { icon: "bi-heart-pulse", title: "Patient-Centered Care", desc: "Individualized attention throughout treatment." },
     { icon: "bi-people", title: "Multidisciplinary Collaboration", desc: "Coordinated care with specialist teams." }
   ],
-
   hospitals: [
     {
       name: "National Institute of Neurosciences & Hospital",
@@ -100,7 +91,7 @@ const SITE_DATA = {
       address: "Agargaon, Sher-e-Bangla Nagar, Dhaka 1207, Bangladesh",
       phone: "+880 0000 000000",
       schedule: "Saturday – Thursday: 10:00 AM – 5:00 PM",
-      mapEmbed: ""
+      mapEmbed: HOSPITAL_MAP_URL
     },
     {
       name: "Neurotrauma & Spine Clinic",
@@ -108,10 +99,9 @@ const SITE_DATA = {
       address: "Dhaka, Bangladesh",
       phone: "+880 0000 000001",
       schedule: "By appointment",
-      mapEmbed: ""
+      mapEmbed: HOSPITAL_MAP_URL
     }
   ],
-
   publications: [],
   articles: [],
   faqs: [
